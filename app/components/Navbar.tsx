@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 const links = [
   { name: "Home", href: "/" },
@@ -23,10 +24,9 @@ export default function Navbar() {
         Hayden
       </Link>
 
-      {/* Navigation */}
+      {/* Desktop Navigation */}
 
-      <div className="flex items-center gap-7">
-
+      <div className="hidden items-center gap-7 md:flex">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -36,7 +36,12 @@ export default function Navbar() {
             {link.name}
           </Link>
         ))}
+      </div>
 
+      {/* Mobile Navigation */}
+
+      <div className="md:hidden">
+        <MobileMenu />
       </div>
 
     </nav>

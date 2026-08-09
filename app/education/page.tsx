@@ -41,23 +41,22 @@ const education = [
 
 export default function Education() {
   return (
-    <main className="min-h-screen bg-[#0B0D10] text-white">
-
-      <section className="mx-auto max-w-5xl px-6 py-24">
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
 
         {/* Page Heading */}
 
-        <div className="mb-20">
+        <div className="mb-14 sm:mb-20">
 
-          <p className="uppercase tracking-[0.3em] text-blue-300">
+          <p className="uppercase tracking-[0.25em] text-blue-300 sm:tracking-[0.3em]">
             Education
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Academic Journey
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:mt-6 sm:text-lg sm:leading-8">
             Studying accounting and finance while gaining academic
             experience in both Hong Kong and the United Kingdom.
           </p>
@@ -66,16 +65,16 @@ export default function Education() {
 
         {/* Education Cards */}
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
 
           {education.map((item) => (
 
             <article
               key={`${item.institution}-${item.period}`}
-              className="rounded-3xl border border-gray-700 bg-[#15191F] p-8 transition duration-300 hover:-translate-y-1 hover:border-gray-600"
+              className="rounded-3xl border border-gray-700 bg-[#15191F] p-6 transition duration-300 hover:-translate-y-1 hover:border-gray-600 sm:p-8"
             >
 
-              <div className="flex flex-col justify-between gap-4 md:flex-row">
+              <div className="flex flex-col justify-between gap-3 md:flex-row">
 
                 <div>
 
@@ -83,11 +82,11 @@ export default function Education() {
                     {item.period}
                   </p>
 
-                  <h3 className="mt-3 text-2xl font-bold text-white">
+                  <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
                     {item.institution}
                   </h3>
 
-                  <p className="mt-2 text-lg text-gray-200">
+                  <p className="mt-2 text-base text-gray-200 sm:text-lg">
                     {item.programme}
                   </p>
 
@@ -99,13 +98,13 @@ export default function Education() {
 
               </div>
 
-              <p className="mt-6 max-w-3xl leading-7 text-gray-300">
+              <p className="mt-5 max-w-3xl text-base leading-7 text-gray-300 sm:mt-6">
                 {item.description}
               </p>
 
-              <div className="mt-7">
+              <div className="mt-6 sm:mt-7">
 
-                <ul className="space-y-3 text-gray-200">
+                <ul className="space-y-3 text-base leading-7 text-gray-200">
 
                   {item.highlights.map((highlight) => (
 
@@ -114,7 +113,7 @@ export default function Education() {
                       className="flex gap-3"
                     >
 
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-300" />
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-300" />
 
                       <span>
                         {highlight}
@@ -135,7 +134,6 @@ export default function Education() {
         </div>
 
       </section>
-
     </main>
   );
 }

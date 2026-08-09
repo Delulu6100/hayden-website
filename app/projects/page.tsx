@@ -27,28 +27,27 @@ const projects = [
 
 export default function Projects() {
   return (
-    <main className="min-h-screen bg-[#0B0D10] text-white">
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
 
-      <section className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-14 max-w-3xl sm:mb-20">
 
-        <div className="mb-20 max-w-3xl">
-
-          <p className="uppercase tracking-[0.3em] text-blue-300">
+          <p className="uppercase tracking-[0.25em] text-blue-300 sm:tracking-[0.3em]">
             Projects
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Things I've built
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-5 text-base leading-7 text-gray-300 sm:mt-6 sm:text-lg sm:leading-8">
             A collection of projects from experimenting with game
             development to building things on the web.
           </p>
 
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
 
           {projects.map((project) => (
 
@@ -59,33 +58,33 @@ export default function Projects() {
 
               {/* Project image placeholder */}
 
-              <div className="flex h-64 items-center justify-center bg-[#0F1216]">
+              <div className="flex h-52 items-center justify-center bg-[#0F1216] sm:h-64">
 
-                <span className="text-sm uppercase tracking-widest text-gray-500">
+                <span className="px-6 text-center text-xs uppercase tracking-widest text-gray-500 sm:text-sm">
                   Screenshot Coming Soon
                 </span>
 
               </div>
 
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
 
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-start justify-between gap-4">
 
                   <p className="text-sm font-medium uppercase tracking-widest text-blue-300">
                     {project.category}
                   </p>
 
-                  <span className="text-xs text-gray-500">
+                  <span className="shrink-0 text-xs text-gray-500">
                     {project.status}
                   </span>
 
                 </div>
 
-                <h3 className="mt-4 text-2xl font-bold">
+                <h3 className="mt-4 text-xl font-bold sm:text-2xl">
                   {project.title}
                 </h3>
 
-                <p className="mt-4 leading-7 text-gray-300">
+                <p className="mt-4 text-base leading-7 text-gray-300">
                   {project.description}
                 </p>
 
@@ -106,7 +105,7 @@ export default function Projects() {
 
                 <a
                   href="#"
-                  className="group mt-8 inline-flex items-center gap-2 font-medium text-gray-300 transition-colors hover:text-white"
+                  className="group mt-7 inline-flex items-center gap-2 font-medium text-gray-300 transition-colors hover:text-white sm:mt-8"
                 >
                   View Project
 
@@ -124,7 +123,6 @@ export default function Projects() {
         </div>
 
       </section>
-
     </main>
   );
 }

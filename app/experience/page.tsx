@@ -59,21 +59,20 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <main className="min-h-screen bg-[#0B0D10] text-white">
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
 
-      <section className="mx-auto max-w-5xl px-6 py-24">
+        <div className="mb-14 sm:mb-20">
 
-        <div className="mb-20">
-
-          <p className="uppercase tracking-[0.3em] text-blue-300">
+          <p className="uppercase tracking-[0.25em] text-blue-300 sm:tracking-[0.3em]">
             Experience
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Where I've worked
           </h2>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+          <p className="mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:mt-6 sm:text-lg sm:leading-8">
             Exploring finance, accounting, markets and different
             working environments through internships and university work.
           </p>
@@ -86,7 +85,7 @@ export default function Experience() {
 
           <div className="absolute left-3 top-0 hidden h-full w-px bg-gray-700 md:block" />
 
-          <div className="space-y-16">
+          <div className="space-y-10 sm:space-y-16">
 
             {experiences.map((experience) => (
 
@@ -101,7 +100,7 @@ export default function Experience() {
                   <div className="h-2 w-2 rounded-full bg-blue-300" />
                 </div>
 
-                <div className="rounded-3xl border border-gray-700 bg-[#15191F] p-8 transition duration-300 hover:-translate-y-1 hover:border-gray-600">
+                <div className="rounded-3xl border border-gray-700 bg-[#15191F] p-6 transition duration-300 hover:-translate-y-1 hover:border-gray-600 sm:p-8">
 
                   <div className="flex flex-col justify-between gap-3 md:flex-row">
 
@@ -111,11 +110,11 @@ export default function Experience() {
                         {experience.year}
                       </p>
 
-                      <h3 className="mt-3 text-2xl font-bold text-white">
+                      <h3 className="mt-3 text-xl font-bold text-white sm:text-2xl">
                         {experience.role}
                       </h3>
 
-                      <p className="mt-2 text-lg text-gray-200">
+                      <p className="mt-2 text-base text-gray-200 sm:text-lg">
                         {experience.company}
                       </p>
 
@@ -127,17 +126,17 @@ export default function Experience() {
 
                   </div>
 
-                  <p className="mt-6 max-w-3xl leading-7 text-gray-300">
+                  <p className="mt-5 max-w-3xl text-base leading-7 text-gray-300 sm:mt-6">
                     {experience.description}
                   </p>
 
-                  <div className="mt-7">
+                  <div className="mt-6 sm:mt-7">
 
                     <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gray-400">
                       Highlights
                     </p>
 
-                    <ul className="space-y-3 text-gray-200">
+                    <ul className="space-y-3 text-base leading-7 text-gray-200">
 
                       {experience.highlights.map((highlight) => (
 
@@ -145,7 +144,8 @@ export default function Experience() {
                           key={highlight}
                           className="flex gap-3"
                         >
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-300" />
+
+                          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-300" />
 
                           <span>
                             {highlight}
@@ -170,7 +170,6 @@ export default function Experience() {
         </div>
 
       </section>
-
     </main>
   );
 }

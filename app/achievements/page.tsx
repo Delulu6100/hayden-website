@@ -27,23 +27,22 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <main className="min-h-screen bg-[#0B0D10] text-white">
-
-      <section className="mx-auto max-w-5xl px-6 py-24">
+    <main className="min-h-screen bg-neutral-950 text-white">
+      <section className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
 
         {/* Page Heading */}
 
-        <div className="mb-20 max-w-3xl">
+        <div className="mb-14 max-w-3xl sm:mb-20">
 
-          <p className="uppercase tracking-[0.3em] text-blue-300">
+          <p className="uppercase tracking-[0.25em] text-blue-300 sm:tracking-[0.3em]">
             Achievements
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
+          <h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Recognition along the way
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <p className="mt-5 text-base leading-7 text-gray-300 sm:mt-6 sm:text-lg sm:leading-8">
             A collection of scholarships and awards received during my
             university journey.
           </p>
@@ -52,32 +51,32 @@ export default function Achievements() {
 
         {/* Achievement Cards */}
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
 
           {achievements.map((achievement) => (
 
             <article
               key={achievement.title}
-              className="group rounded-3xl border border-gray-700 bg-[#15191F] p-8 transition duration-300 hover:-translate-y-1 hover:border-gray-600"
+              className="group rounded-3xl border border-gray-700 bg-[#15191F] p-6 transition duration-300 hover:-translate-y-1 hover:border-gray-600 sm:p-8"
             >
 
-              <div className="flex items-start justify-between gap-6">
+              <div className="flex items-start justify-between gap-4 sm:gap-6">
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-gray-600 text-lg text-gray-300">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-600 text-base text-gray-300 sm:h-11 sm:w-11 sm:text-lg">
                   ★
                 </div>
 
-                <p className="text-sm text-gray-400">
+                <p className="text-right text-sm text-gray-400">
                   {achievement.year}
                 </p>
 
               </div>
 
-              <h3 className="mt-8 text-2xl font-bold leading-snug text-white">
+              <h3 className="mt-6 text-xl font-bold leading-snug text-white sm:mt-8 sm:text-2xl">
                 {achievement.title}
               </h3>
 
-              <p className="mt-4 leading-7 text-gray-300">
+              <p className="mt-4 text-base leading-7 text-gray-300">
                 {achievement.description}
               </p>
 
@@ -88,7 +87,6 @@ export default function Achievements() {
         </div>
 
       </section>
-
     </main>
   );
 }
