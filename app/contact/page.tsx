@@ -31,6 +31,8 @@ export default function Contact() {
 
             <a
               href="https://www.linkedin.com/in/hayden-yau/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-700 px-6 py-3 font-medium text-gray-200 transition hover:border-gray-500 hover:bg-gray-900"
             >
               LinkedIn
