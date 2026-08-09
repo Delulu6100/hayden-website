@@ -22,7 +22,7 @@ export default function Contact() {
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:haydenyau.contact@gmail.com"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3 font-medium text-black transition hover:bg-gray-200"
             >
               Email me
@@ -30,7 +30,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/hayden-yau/"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-700 px-6 py-3 font-medium text-gray-200 transition hover:border-gray-500 hover:bg-gray-900"
             >
               LinkedIn
