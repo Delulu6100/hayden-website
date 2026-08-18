@@ -1,0 +1,149 @@
+/* ── GF GAME — terminal / cyberpunk theme ─────────────────── */
+
+.gfgame-shell {
+  --gf-bg: #0a120a;
+  --gf-bg-panel: #0d180d;
+  --gf-border: #1e3d24;
+  --gf-neon: #5dff8a;
+  --gf-neon-dim: #2a8f4a;
+  --gf-cyan: #4de8ff;
+  --gf-amber: #ffd75a;
+  --gf-text: #b8f0c8;
+  --gf-text-dim: #5a8060;
+
+  position: relative;
+  min-height: 100dvh;
+  background: var(--gf-bg);
+  color: var(--gf-text);
+  font-family: var(--font-gfgame), ui-monospace, monospace;
+}
+
+/* CRT scanline overlay */
+.gfgame-scanlines::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  opacity: 0.35;
+}
+
+/* Subtle grid */
+.gfgame-grid::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(var(--gf-neon-dim) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gf-neon-dim) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Vignette */
+.gfgame-vignette::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.gfgame-blink {
+  animation: gfgame-blink 1.2s step-end infinite;
+}
+
+@keyframes gfgame-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes gfgame-dash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes gfgame-pulse-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+    filter: drop-shadow(0 0 4px var(--gf-neon));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 12px var(--gf-neon));
+  }
+}
+
+@keyframes gfgame-node-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.gfgame-pixel-border {
+  border: 3px solid var(--gf-border);
+  box-shadow:
+    0 0 0 1px rgba(93, 255, 138, 0.15),
+    4px 4px 0 rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(93, 255, 138, 0.03);
+}
+
+.gfgame-neon-text {
+  color: var(--gf-neon);
+  text-shadow:
+    0 0 8px rgba(93, 255, 138, 0.6),
+    0 0 20px rgba(93, 255, 138, 0.25);
+}
+
+.gfgame-arcade-btn {
+  min-height: 48px;
+  border: 3px solid var(--gf-neon);
+  background: linear-gradient(180deg, #143318 0%, #0a120a 100%);
+  color: var(--gf-neon);
+  font-family: var(--font-gfgame), ui-monospace, monospace;
+  box-shadow:
+    0 0 12px rgba(93, 255, 138, 0.25),
+    4px 4px 0 rgba(0, 0, 0, 0.7);
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    background 0.08s ease;
+}
+
+.gfgame-arcade-btn:active:not(:disabled) {
+  transform: scale(0.96) translateY(2px);
+  box-shadow:
+    0 0 20px rgba(93, 255, 138, 0.5),
+    1px 1px 0 rgba(0, 0, 0, 0.7);
+  background: linear-gradient(180deg, #1a4520 0%, #0d180d 100%);
+}
+
+.gfgame-arcade-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}

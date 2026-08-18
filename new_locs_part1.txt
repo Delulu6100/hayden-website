@@ -1,0 +1,92 @@
+  {
+    id: "budapest",
+    name: "Budapest",
+    country: "Hungary",
+    flag: "🇭🇺",
+    mapX: 53,
+    mapY: 59,
+    tagline: "Another stop during exchange",
+    unlockAfterLocationId: "czechia",
+    chapters: [
+      {
+        id: "budapest-memory",
+        title: "Budapest",
+        subtitle: "A place that became part of the story",
+        emoji: "🏰",
+        memoryId: "mem-budapest",
+        startNodeId: "start",
+        nodes: {
+          start: {
+            id: "start",
+            speaker: "NARRATOR",
+            text: "Budapest. Another stop during exchange.",
+            choices: [
+              { id: "explore", label: "Walk the streets", nextNodeId: "end", unlockMemoryId: "mem-budapest" },
+            ],
+          },
+          end: {
+            id: "end",
+            speaker: "HAYDEN",
+            text: "Every city leaves a mark.",
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: "italy",
+    name: "Italy",
+    country: "Italy",
+    flag: "🇮🇹",
+    mapX: 59,
+    mapY: 70,
+    tagline: "Coats, power banks & Roman streets",
+    unlockAfterLocationId: "budapest",
+    chapters: [
+      {
+        id: "italy-coat",
+        title: "The Coat — Venice",
+        subtitle: "A small thing",
+        emoji: "🧥",
+        memoryId: "mem-coat",
+        startNodeId: "start",
+        nodes: {
+          start: {
+            id: "start",
+            speaker: "NARRATOR",
+            text: "Venice was beautiful. But it was getting cold.",
+            nextNodeId: "cold",
+          },
+          cold: {
+            id: "cold",
+            speaker: "HAYDEN",
+            text: "You're cold.",
+            nextNodeId: "wait",
+          },
+          wait: {
+            id: "wait",
+            speaker: "KELLY",
+            text: "A little.",
+            nextNodeId: "hostel",
+          },
+          hostel: {
+            id: "hostel",
+            speaker: "HAYDEN",
+            text: "Wait here.",
+            nextNodeId: "back",
+          },
+          back: {
+            id: "back",
+            speaker: "NARRATOR",
+            text: "Hayden went back to the hostel. Just to get your coat.",
+            choices: [
+              { id: "return", label: "Come back with the coat", nextNodeId: "end", unlockMemoryId: "mem-coat" },
+            ],
+          },
+          end: {
+            id: "end",
+            speaker: "NARRATOR",
+            text: "Sometimes caring about someone is as simple as making sure they're warm.",
+          },
+        },
+      },

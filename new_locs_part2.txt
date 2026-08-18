@@ -1,0 +1,128 @@
+      {
+        id: "italy-powerbank",
+        title: "The Power Bank — Rome",
+        subtitle: "Don't let your phone die",
+        emoji: "🔋",
+        memoryId: "mem-powerbank",
+        startNodeId: "start",
+        nodes: {
+          start: {
+            id: "start",
+            speaker: "NARRATOR",
+            text: "Rome. Something unexpected happened.",
+            nextNodeId: "waiting",
+          },
+          waiting: {
+            id: "waiting",
+            speaker: "KELLY",
+            text: "I'm waiting for them.",
+            nextNodeId: "rush",
+          },
+          rush: {
+            id: "rush",
+            speaker: "NARRATOR",
+            text: "So Hayden rushed back to find you.",
+            nextNodeId: "give",
+          },
+          give: {
+            id: "give",
+            speaker: "HAYDEN",
+            text: "Here. What's this? My power bank. You'll need it.",
+            nextNodeId: "small",
+          },
+          small: {
+            id: "small",
+            speaker: "NARRATOR",
+            text: "A small thing. But I wanted to make sure you were okay.",
+            choices: [
+              { id: "accept", label: "Thank you", nextNodeId: "end", unlockMemoryId: "mem-powerbank" },
+            ],
+          },
+          end: {
+            id: "end",
+            speaker: "KELLY",
+            text: "I really appreciate this.",
+          },
+        },
+      },
+    ],
+  },
+  {
+    id: "london",
+    name: "London",
+    country: "United Kingdom",
+    flag: "🇬🇧",
+    mapX: 62,
+    mapY: 58,
+    tagline: "Trains, markets & firsts",
+    unlockAfterLocationId: "italy",
+    chapters: [
+      {
+        id: "london-confession",
+        title: "The Confession",
+        subtitle: "Coventry → London",
+        emoji: "❤️",
+        memoryId: "mem-confession",
+        startNodeId: "start",
+        nodes: {
+          start: {
+            id: "start",
+            speaker: "NARRATOR",
+            text: "The train was heading towards London.\nEverything looked normal.\nExcept Hayden was extremely nervous.",
+            nextNodeId: "nervous",
+          },
+          nervous: {
+            id: "nervous",
+            speaker: "KELLY",
+            text: "Are you okay?",
+            nextNodeId: "ask",
+          },
+          ask: {
+            id: "ask",
+            speaker: "HAYDEN",
+            text: "Kelly... can you be my boyfriend?",
+            choices: [
+              { id: "yes", label: "Yes.", nextNodeId: "yes-scene", unlockMemoryId: "mem-confession" },
+              { id: "laugh", label: "HAHAHAHA — yes.", nextNodeId: "yes-scene", unlockMemoryId: "mem-confession" },
+            ],
+          },
+          "yes-scene": {
+            id: "yes-scene",
+            speaker: "NARRATOR",
+            text: "And just like that, everything changed.",
+          },
+        },
+      },
+      {
+        id: "london-borough",
+        title: "Borough Market",
+        subtitle: "Fish, chips & crème brûlée donuts",
+        emoji: "🍓",
+        memoryId: "mem-borough",
+        startNodeId: "start",
+        nodes: {
+          start: {
+            id: "start",
+            speaker: "KELLY",
+            text: "I've wanted to come here for ages.",
+            nextNodeId: "food",
+          },
+          food: {
+            id: "food",
+            speaker: "NARRATOR",
+            text: "Fish and chips. Strawberry chocolate. And the special crème brûlée donut.",
+            choices: [
+              { id: "donut", label: "Get the donut first", nextNodeId: "end", unlockMemoryId: "mem-borough" },
+              { id: "chips", label: "Fish & chips first", nextNodeId: "end", unlockMemoryId: "mem-borough" },
+            ],
+          },
+          end: {
+            id: "end",
+            speaker: "HAYDEN",
+            text: "This is actually really good.",
+          },
+        },
+      },
+    ],
+  },
+  {
