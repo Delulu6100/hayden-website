@@ -47,7 +47,11 @@ type Location = {
 /* =========================================================
    MEMORIES
 
-   Real memories, unchanged. Real presentation around them is what
+<<<<<<< HEAD
+   Real memories, unchanged. Presentation around them is what
+=======
+   Real memories, unchanged. Presentation around them is what
+>>>>>>> 693c213533d236b03785badd7b5672015affc406
    this pass improves — not the words themselves.
 ========================================================= */
 

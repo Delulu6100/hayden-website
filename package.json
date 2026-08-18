@@ -22,8 +22,11 @@
     "eslint-config-next": "16.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+<<<<<<< HEAD
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true
+=======
+>>>>>>> 693c213533d236b03785badd7b5672015affc406
   }
 }
